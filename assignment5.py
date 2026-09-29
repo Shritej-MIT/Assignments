@@ -1,8 +1,10 @@
 import re
 
-string = input("Enter a string: ")
+pan = input("Enter PAN number: ")
 
-if re.fullmatch(r'[a-zA-Z0-9]+', string):
-    print("Valid string")
+pattern = r"^[A-Z]{5}[0-9]{4}[A-Z]$"
+
+if re.fullmatch(pattern, pan):
+    print("Valid PAN Number")
 else:
-    print("Invalid string")
+    print("Invalid PAN Number")
